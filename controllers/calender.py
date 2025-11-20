@@ -17,3 +17,6 @@ class CalenderController:
     
     def get_booking(self, session: Session, booking_id: int):
         return self.calender_service.get_booking(session, booking_id)
+    
+    def list_all_bookings(self, session: Session):
+        return self.calender_service.get_all_bookings(session)

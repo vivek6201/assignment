@@ -77,6 +77,7 @@ You can add other variables as needed (e.g., `ALLOWED_HOSTS`).
 ## API Endpoints
 - `/api/calendar/event_type` - Get all event types
 - `/api/calendar/available_slots` - Get available slots
+- `/api/calendar/available_slots/{type_id}` - Get available slots filtered by type
 - `/api/calendar/book` - Book a slot
 
 ## Data Files

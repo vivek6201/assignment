@@ -23,3 +23,7 @@ def book_event(event_data: BookingCreate, session: Session = Depends(get_session
 @calender_router.get("/booking/{booking_id}")
 def get_booking(booking_id: int, session: Session = Depends(get_session)):
     return calender_controller.get_booking(session, booking_id)
+
+@calender_router.get("/list_all_bookings")
+def list_all_bookings(session: Session = Depends(get_session)):
+    return calender_controller.list_all_bookings(session)

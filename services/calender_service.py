@@ -73,5 +73,23 @@ class CalenderService:
             "created_at": booking.created_at,
             "updated_at": booking.updated_at
         }
+        
+    def get_all_bookings(self, session: Session) -> list[Booking]:
+        bookings = session.exec(select(Booking)).all()
+        result = []
+        for booking in bookings:
+            type_details = self.get_event_type_by_id(booking.type_id)
+            result.append({
+                "id": booking.id,
+                "type_id": booking.type_id,
+                "type": type_details,
+                "start_time": booking.start_time,
+                "end_time": booking.end_time,
+                "patient_name": booking.patient_name,
+                "patient_email": booking.patient_email,
+                "created_at": booking.created_at,
+                "updated_at": booking.updated_at
+            })
+        return result
 
 calender_service = CalenderService()
