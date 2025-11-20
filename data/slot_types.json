@@ -1,0 +1,6 @@
+[
+  {"id": 1, "type": "General Consultation", "duration": 15},
+  {"id": 2, "type": "Follow-up Consultation", "duration": 30},
+  {"id": 3, "type": "Physical Examination", "duration": 45},
+  {"id": 4, "type": "Specialist Consultation", "duration": 60}
+]

@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: lyser-postgresdb
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpass
+      POSTGRES_DB: lyzerdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - lyzer_data:/var/lib/postgresql/data
+
+volumes:
+  lyzer_data:
